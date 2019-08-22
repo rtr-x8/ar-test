@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WEB AR TEST</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin:0px; overflow:hidden;">
+    <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;">
+        <a-gltf-model url="mode.gltf">
+            <a-text value="My name is soeyu!\n Nice to meet you!" position=" 0 0 1" align="center" rotation="-90 0 0"
+                color="#7993ff">
+            </a-text>
+        </a-gltf-model>
+        <a-entity camera></a-entity>
+        <a-marker-camera preset='hiro'></a-marker-camera>
+        <a-camera-static />
+    </a-scene>
+</body>
+</html>
